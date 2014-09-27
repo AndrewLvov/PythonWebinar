@@ -1,5 +1,6 @@
 import random
 
+from numbers_fn import numbers
 
 def happy_toad():
     h = "toad!"
@@ -11,7 +12,7 @@ def happy_toad():
     return 0
 
 
-def main():
+def random_with_toad():
     for i in range(32):
         # print("i: {}".format(type(i)))
         r = random.randrange(0, 1024)
@@ -20,5 +21,11 @@ def main():
         if r % 5 == 0:
             # print("r % 5 == 0: {}".format(type(r % 5 == 0)))
             happy_toad()
+
+
+def main():
+    # random_with_toad()
+    numbers()
+
 
 main()
