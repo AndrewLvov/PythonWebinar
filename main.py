@@ -1,23 +1,29 @@
-def make_world_go_round(world, speed, happy=True):
-    print("The {} is going round at speed {} knots".format(world, speed))
-
-
-# arguments unpacking
-def some_generic_fn(a, *args, c, **kwargs):
-    print("a: {}".format(a))
-    print("Args: {}".format(args))
-    print("Kwargs: {}".format(kwargs))
-
 
 def main():
-    # make_world_go_round("Earth", 120)
-    make_world_go_round(speed=120, happy=False, world="Earth")
-    make_world_go_round("Earth", speed=120)
-    # make_world_go_round(speed=120, "Earth")  # не работает,
-    # неименованные нельзя после хоть  1го  именованного
-    make_world_go_round(speed=120, world="Earth")  # работает
+    # n1 = 1
+    # n2 = 1
+    # print(n1)
+    # for i in range(14):
+    #     with open('{}.txt'.format(i), 'w') as f:
+    #         f.write(str(n1))
+    #     n1, n2 = n2, n1 + n2
 
-    some_generic_fn(5, 3, 'a', s='s', t=[1, 2], f=(5+3), c='just a string')
-    # some_generic_fn(5, 3, 'a', s='s', [1, 2], f=(5+3))  # не работает
+    # zfill
+    # format
+
+    # nums = sorted(['{:04}'.format(i) for i in range(14)])
+
+    # nums = sorted(
+    #     map(lambda x: x.zfill(4),
+    #         [str(i) for i in range(14)])
+    # )
+    # аналог:
+    nums = []
+    for i in range(14):
+        v = str(i)
+        v = v.zfill(4)
+        nums.append(v)
+    nums = sorted(nums)
+    print(nums)
 
 main()
